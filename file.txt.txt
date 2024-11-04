@@ -1,0 +1,22 @@
+// C File Handling
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int number;
+    FILE *fptr;
+    fptr=fopen("C:\\Users\\DELL\\OneDrive\\Desktop\\oAssignment\\file.txt.txt","w");
+    if (fptr==NULL){
+        printf("Error opening file");
+        exit(1);
+    }
+    
+    printf("Enter a random number");
+    scanf("%d",number);
+    
+    fprintf(fptr,"The number entered is %d",number);
+    fclose(fptr);
+    printf("Number saved succesfully");
+    
+    return 0;
+}
